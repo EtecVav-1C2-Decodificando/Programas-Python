@@ -1,0 +1,7 @@
+r = "s"
+
+while r == "s":
+    ano = int(input("Ano: "))
+    print("É bissexto" if (ano % 400 == 0) or (ano % 4 == 0 and ano % 100 != 0) else "Não é bissexto")
+
+    r = input("Deseja continuar? s/n: ")
