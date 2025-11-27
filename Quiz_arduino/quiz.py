@@ -70,7 +70,7 @@ def mostrar_regras():
 
     input("Pressione ENTER para voltar ao menu...")
     os.system('cls')
-    mostrar_menu()
+	mostrar_menu()
 
 # Módulo responsavel por definir e embaralhar as questoes e alternativas
 def sortear_questoes():
@@ -88,6 +88,13 @@ def sortear_questoes():
         ("O Arduino Nano e conhecido por:", ["Ser compacto", "Ter display embutido", "Usar bateria interna", "Ter Wi-Fi", "Nao ter porta USB"], "Ser compacto"),
         ("O Arduino Due utiliza qual tipo de microcontrolador?", ["ATmega328", "ATmega2560", "ARM Cortex-M3", "ESP32", "ATtiny85"], "ARM Cortex-M3"),
         ("Qual placa Arduino ja vem com Wi-Fi integrado?", ["Arduino Uno", "Arduino Mega", "Arduino Nano", "Arduino Uno WiFi Rev2", "Arduino Leonardo"], "Arduino Uno WiFi Rev2"),
+
+		# === Componentes e arquitetura básica ===
+		("Qual componente do Arduino é responsável por permitir a comunicação USB com o computador?", ["Conversor USB-Serial", "Regulador de tensão", "Oscilador", "Driver H-Bridge", "Transistor MOSFET"], "Conversor USB-Serial"),
+		("A EEPROM do ATmega328P é usada para armazenar:", ["Dados permanentes", "Código do programa", "Variáveis temporárias", "Bibliotecas", "Níveis lógicos"], "Dados permanentes"),
+		("O que define a resolução do conversor ADC do Arduino Uno?", ["10 bits", "8 bits", "12 bits", "14 bits", "16 bits"], "10 bits"),
+		("Para que serve o barramento ICSP presente na placa Arduino?", ["Programar o microcontrolador diretamente", "Conectar motores", "Medir tensão", "Ativar Wi-Fi", "Controlar LEDs RGB"], "Programar o microcontrolador diretamente"),
+		("Qual a função dos capacitores próximos ao regulador de tensão na placa?", ["Filtrar ruído elétrico", "Gerar clock", "Armazenar código", "Converter sinais digitais", "Ativar PWM"], "Filtrar ruído elétrico"),
 
         # === Conexoes, portas e sinais ===
         ("As portas digitais do Arduino podem ser usadas para:", ["Sinais analogicos apenas", "Sinais digitais", "Sinais de radio", "Energia AC", "Som"], "Sinais digitais"),
@@ -149,7 +156,7 @@ def exibir_questoes(perguntas_embaralhadas):
     pontuacao = 0
     letras = ["A", "B", "C", "D", "E"]
     for pergunta, alternativas, correta in perguntas_embaralhadas:
-        if qtd > 20:
+        if qtd == 20:
             break
         print(f"Pergunta numero{qtd}")
         print(pergunta)
@@ -206,6 +213,9 @@ def verificar_respostas(resposta_usuario, alternativas, correta):
     return pontos
 
 def exibir_resultado(pontuacao_total):
+	print("------------------------------")
+    print("        RESULTADO FINAL       ")
+    print("------------------------------")
     if pontuacao_total >= 7:
         print(f"🟢 Parabéns! Você acertou {pontuacao_total}/10")
     elif pontuacao_total >= 5:
@@ -213,6 +223,7 @@ def exibir_resultado(pontuacao_total):
     else:
         print(f"🔴 Infelizmente você só acertou {pontuacao_total}/10, estude mais e tente novamente")
 
+	print("------------------------------")
     input("Pressione ENTER para voltar ao menu: ")
     time.sleep(1)
     os.system('cls')
