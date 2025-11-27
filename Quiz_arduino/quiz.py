@@ -52,3 +52,18 @@ def mostrar_menu():
         print("Opcao invalida!")
         time.sleep(1)
         mostrar_menu()
+#Modulo que mostra as regras 
+def mostrar_regras():
+    print("------------------------------")
+    print("            REGRAS            ")
+    print("------------------------------")
+    print("Cada questão vale 0,5 pontos")
+    print("Cada rodada é composta por 20 questões")
+    print("Questões de múltipla escolha (A-E)")
+    print("Há apenas uma alternativa correta")
+    print("A pontuação máxima é 10 pontos")
+    print("------------------------------")
+
+    input("Pressione ENTER para voltar ao menu...")
+    os.system('cls')
+    mostrar_menu()
