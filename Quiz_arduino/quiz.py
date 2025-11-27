@@ -158,3 +158,45 @@ def exibir_questoes(perguntas_embaralhadas):
         qtd += 1
     
     exibir_resultado(pontuacao) # Exibe pontuação final depois das 20 perguntas
+# Módulo que soma as respostas e pontuação
+def verificar_respostas(resposta_usuario, alternativas, correta):
+    while resposta_usuario not in ["A", "B", "C", "D", "E"]:
+        print("Letra inválida")
+        resposta_usuario = input("Digite a letra de sua resposta: ").upper()
+
+    pontos = 0
+
+    if resposta_usuario == "A" and alternativas[0] == correta:
+        print("✅️ Você Acertou!")
+        pontos = 0.5
+    elif resposta_usuario == "A":
+        print(f"❌️ Errado! a resposta correta era: {correta}")
+
+    elif resposta_usuario == "B" and alternativas[1] == correta:
+        print("✅️ Você Acertou!")
+        pontos = 0.5
+    elif resposta_usuario == "B":
+        print(f"❌️ Errado! a resposta correta era: {correta}")
+
+    elif resposta_usuario == "C" and alternativas[2] == correta:
+        print("✅️ Você Acertou!")
+        pontos = 0.5
+    elif resposta_usuario == "C":
+        print(f"❌️ Errado! a resposta correta era: {correta}")
+
+    elif resposta_usuario == "D" and alternativas[3] == correta:
+        print("✅️ Você Acertou!")
+        pontos = 0.5
+    elif resposta_usuario == "D":
+        print(f"❌️ Errado! a resposta correta era: {correta}")
+
+    elif resposta_usuario == "E" and alternativas[4] == correta:
+        print("✅️ Você Acertou!")
+        pontos = 0.5
+    elif resposta_usuario == "E":
+        print(f"❌️ Errado! a resposta correta era: {correta}")
+    
+    print("Carregando próxima pergunta")
+    time.sleep(2)
+    os.system('cls')
+    return pontos
