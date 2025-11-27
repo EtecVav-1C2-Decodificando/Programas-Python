@@ -200,3 +200,19 @@ def verificar_respostas(resposta_usuario, alternativas, correta):
     time.sleep(2)
     os.system('cls')
     return pontos
+
+def exibir_resultado(pontuacao_total):
+    if pontuacao_total >= 7:
+        print(f"🟢 Parabéns! Você acertou {pontuacao_total}/10")
+    elif pontuacao_total >= 5:
+        print(f"🟠 Muito bem! Você acertou {pontuacao_total}/10, mas ainda dá para melhorar!")
+    else:
+        print(f"🔴 Infelizmente você só acertou {pontuacao_total}/10, estude mais e tente novamente")
+
+    input("Pressione ENTER para voltar ao menu: ")
+    time.sleep(1)
+    os.system('cls')
+    mostrar_menu()
+    
+#  Chama a função responsavel por exibir o menu e iniciar o código
+mostrar_menu()
