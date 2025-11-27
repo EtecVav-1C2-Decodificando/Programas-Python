@@ -1,3 +1,7 @@
+import os
+import time
+import random
+
 # Módulo que exibe o menu inicial
 def mostrar_menu():
     print("Seja bem vindo ao Quiz! sobre Arduíno")
