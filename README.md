@@ -11,15 +11,23 @@ O jogo inclui menu, regras, créditos, sorteio aleatório de questões, embaralh
 Menu inicial com:
 
 -Iniciar quiz
+
 -Exibir regras
+
 -Créditos
+
 -Encerrar programa
 
 -20 perguntas por rodada
+
 -Questões totalmente embaralhadas
+
 -Alternativas embaralhadas a cada execução
+
 -Correção automática com feedback (acerto/erro)
+
 -Pontuação final de 0 a 10
+
 -Interface simples direto no terminal
 
 ---
@@ -39,9 +47,13 @@ Menu inicial com:
 🧠 Como funciona o Quiz
 
 -Cada questão vale 0,5 ponto
+
 -São 20 perguntas por rodada
+
 -Alternativas são de A a E
+
 -Apenas uma correta
+
 -Pontuação máxima: 10 pontos
 
 ---
